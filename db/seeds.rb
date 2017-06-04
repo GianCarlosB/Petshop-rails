@@ -421,7 +421,7 @@ breeds = Breed.create([{ description: 'Affenpinscher' },
     { description: 'Whippet' },
     { description: 'Yorkshire terrier' }]);
 
-puts '--> Raças cadastradas';
+puts "--> Raças cadastradas";
 
 # Array com os caracteres que representam os gêneros
 genders = ['M', 'F'];
@@ -430,15 +430,28 @@ genders = ['M', 'F'];
 number_dogs = 1000;
 
 number_dogs.times do |i|
+    # A data de nascimento do cachorro deve ser entre 10 anos atrás e 2 dias atrás
     birthday = Faker::Date.between(3650.days.ago, 2.days.ago);
+    # A data da última visita deve ser entre a data de nascimento do cachorro e hoje
     date_last_visit = Faker::Date.between(birthday, Date.today);
+  
+    case rand(1..3)
+      when 1
+        name = Faker::Cat.name; # O 'Faker' não possui gerador de nomes de cachorro :(
+      when 2
+        name = Faker::Superhero.name;
+      when 3
+        name = Faker::GameOfThrones.character;
+    end
+        
     Dog.create(breed_id: rand(1..breeds.length), 
         gender: genders.sample, 
         castred: Faker::Boolean.boolean, 
         birthday: birthday, 
-        name: Faker::Cat.name, # O 'Faker' não possui gerador de nomes de cachorro :(
+        name: name,
         owner_name: Faker::Name.name, 
         owner_phone: Faker::PhoneNumber.cell_phone,
         date_last_visit: date_last_visit);
-    puts '--> Cachorro aleatório nº #{i} cadastrado';
+  
+    puts "--> Cachorro aleatório nº #{i} cadastrado";
 end
