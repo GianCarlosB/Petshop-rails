@@ -1,4 +1,4 @@
-<h1><img src="/public/dog.png" alt="dog" heigth="30" width="30"/>Petshop</h1>
+<h1><img src="/public/dog.png" alt="dog" heigth="30" width="30"/> Petshop</h1>
 
 Uma aplicação singlepage desenvolvida utilizando ruby on rails, que lista os dados de um petshop especializada em cachorros.
 
