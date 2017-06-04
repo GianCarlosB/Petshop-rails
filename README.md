@@ -76,7 +76,7 @@ Execute o servidor com o comando:
 rails s
 ```
 
-Supondo que tudo funcionou bem, abre seu navegador em "localhost:3000" e aproveite.
+Supondo que tudo funcionou bem, abre seu navegador em "localhost:3000" e veja:
 
 <br/>
 
