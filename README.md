@@ -77,3 +77,7 @@ rails s
 ```
 
 Supondo que tudo funcionou bem, abre seu navegador em "localhost:3000" e aproveite.
+
+<br/>
+
+<img src="/public/tela.png" alt="tela"/>
